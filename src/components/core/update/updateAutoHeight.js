@@ -28,5 +28,8 @@ export default function (speed) {
   }
 
   // Update Height
-  if (newHeight) swiper.$wrapperEl.css('height', `${newHeight}px`);
+  if (newHeight) {
+    newHeight += 5; // potential box shadow
+    swiper.$wrapperEl.css('height', `${newHeight}px`);
+  }
 }

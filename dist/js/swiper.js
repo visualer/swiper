@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 5, 2018
+ * Released on: July 7, 2018
  */
 
 (function (global, factory) {
@@ -1558,7 +1558,10 @@
     }
 
     // Update Height
-    if (newHeight) { swiper.$wrapperEl.css('height', (newHeight + "px")); }
+    if (newHeight) {
+      newHeight += 5; // potential box shadow
+      swiper.$wrapperEl.css('height', (newHeight + "px"));
+    }
   }
 
   function updateSlidesOffset () {

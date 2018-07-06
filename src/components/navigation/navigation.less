@@ -1,6 +1,6 @@
 .swiper-button-prev, .swiper-button-next {
   position: absolute;
-  top: 13%;
+  top: 100px;
   width: 27px;
   height: 44px;
   margin-top: -22px;
@@ -14,6 +14,9 @@
     cursor: auto;
     pointer-events: none;
   }
+}
+.swiper-button-prev:focus, .swiper-button-next:focus {
+  outline-width: 0;
 }
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
   .svg-background("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='m0,22l22,-22l4,4l-18,18l18,18l-4,4l-22,-22l0,0l0,0z' fill='@{themeColor}'/></svg>");

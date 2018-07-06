@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 5, 2018
+ * Released on: July 7, 2018
  */
 
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, data, transform, transition, on, off, trigger, transitionEnd, outerWidth, outerHeight, offset, css, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, remove, add, styles } from 'dom7/dist/dom7.modular';
@@ -688,7 +688,10 @@ function updateAutoHeight (speed) {
   }
 
   // Update Height
-  if (newHeight) swiper.$wrapperEl.css('height', `${newHeight}px`);
+  if (newHeight) {
+    newHeight += 5; // potential box shadow
+    swiper.$wrapperEl.css('height', `${newHeight}px`);
+  }
 }
 
 function updateSlidesOffset () {
